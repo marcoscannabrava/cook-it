@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   has_many :kitchens
   has_many :bookings
+
+  validates_format_of :email, :with => Devise::email_regexp, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 end
