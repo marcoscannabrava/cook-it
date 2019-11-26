@@ -3,6 +3,4 @@ class Booking < ApplicationRecord
   validates :end_at, uniqueness: true
   belongs_to :user
   belongs_to :kitchen
-
-
 end
