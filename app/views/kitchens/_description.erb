@@ -5,6 +5,8 @@
     <h4>R$ <%= kitchen.price_per_hour %></h4>
     <h5>per hour</h5>
     <p id="adress"><%= kitchen.city %></p>
-    <button type="button" class="btn btn-secondary">BOOK IT</button>
+    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#bookingModal">BOOK IT</button>
   </div>
 </div>
+
+<%= render partial: "modal", locals: {kitchen: @kitchen} %>

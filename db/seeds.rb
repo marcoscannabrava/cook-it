@@ -1,3 +1,5 @@
+User.destroy_all
+Kitchen.destroy_all
 
 photos_array = [
   "https://images.unsplash.com/photo-1473213110592-19430a217c0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
@@ -9,7 +11,7 @@ photos_array = [
   "https://images.unsplash.com/photo-1563238612-755d775174f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=711&q=80",
   "https://images.unsplash.com/photo-1544457850-452ece471004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80"
 ]
-owner = User.create!(email: "a@a.a", password: "123456", name: "DaBoss")
+owner = User.create!(email: "harry-hottie@gmail.com", password: "123456", name: "DaBoss")
 
 8.times do |i|
   kitchen = Kitchen.create!(
