@@ -1,15 +1,18 @@
-  100.times do
-    kitchen = kitchen.new(
-      title:    Faker::Company.name,
-      city: Faker::Address.full_address,
-      #after the presentation decide if we will have city, adress and zipcode separeted
-      description: Faker::Lorem.sentence(word_count: 20),
-      price_per_hour: Faker::Commerce.price
-      #if we add ratings
-      #rating:  rand(0..5)
-    )
-    kitchen.save!
-  end
+user = User.new(email: "user@user.com", password: 123456, name: "User da Silva")
+
+100.times do
+  kitchen = Kitchen.new(
+    title: Faker::Company.name,
+    city: Faker::Address.full_address,
+    #after the presentation decide if we will have city, adress and zipcode separeted
+    description: Faker::Lorem.sentence(word_count: 20),
+    price_per_hour: Faker::Commerce.price,
+    owner: user
+    #if we add ratings
+    #rating:  rand(0..5)
+  )
+  kitchen.save!
+end
 
   # If we change our schema
   #address: "#{Faker::Address.street_address}, #{Faker::Address.city}, #{Faker::Address.zip_code("#####-###")}",
