@@ -1,0 +1,12 @@
+.index-grid {
+  margin-top: 16px; 
+  display: grid; 
+  grid-gap: 16px; 
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 800px) {
+  .index-grid {
+    grid-template-columns: 1fr;
+  }
+}
