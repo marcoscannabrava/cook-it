@@ -1,0 +1,19 @@
+.card {
+  background-color: #EFEEED;
+    .img-fluid {
+      padding: 16px 16px 0;
+      height: 200px;
+    }
+    h5 {
+      letter-spacing: 1px;
+    }
+    p {
+      font-weight: 300;
+      color: #6c757d;
+    }
+    #price {
+      text-align: right;
+      padding-bottom: 10px;
+      padding-right: 10px;
+    }
+}
