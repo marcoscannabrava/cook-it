@@ -1,6 +1,5 @@
 
-<h1><%= @kitchen.title %></h1>
-<br>
-<p><%= @kitchen.city %></p>
-<p><%= @kitchen.description %></p>
-<p><%= @kitchen.price_per_hour %></p>
+<div class="mt-5 container index-grid">
+  <%= image_tag(@kitchen.photo_url, class: "img-fluid") %>
+  <%= render partial: "description", locals: {kitchen: @kitchen} %>
+</div>
