@@ -6,6 +6,6 @@ class Kitchen < ApplicationRecord
   validates :price_per_hour, presence: true
   validates :title, presence: true
   validates_associated :owner
-  
+
   mount_uploader :photo, PhotoUploader
 end
