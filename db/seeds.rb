@@ -1,5 +1,5 @@
-User.destroy_all
 Kitchen.destroy_all
+User.destroy_all
 
 photos_array = [
   "https://images.unsplash.com/photo-1473213110592-19430a217c0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
