@@ -3,7 +3,7 @@
 
 <div class="container index-grid">
   <% @kitchens.each do |kitchen| %>
-    <%= link_to kitchens_path(kitchen) do %>
+    <%= link_to kitchen_path(kitchen) do %>
       <%= render partial: "card", locals: {kitchen: kitchen} %>
     <% end %>
   <% end %>
