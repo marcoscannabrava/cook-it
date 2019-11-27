@@ -1,15 +1,10 @@
 
 <%= render 'shared/banner' %>
 
-<div class="container d-flex flex-wrap">
-  <% @kitchens.each do |r| %>
-    <%= link_to kitchen_path(r) do %>
-      <div class="card m-4" style="min-width: 400px;">        
-        <%= cl_image_tag r.photo, height: 400, width: 400, crop: :fill, class: "card-img-top" %>
-        <div class="card-body m-3">
-          <h5 class="card-title"><%= r.title %></h5>
-        </div>
-      </div>
+<div class="container index-grid">
+  <% @kitchens.each do |kitchen| %>
+    <%= link_to kitchens_path(kitchen) do %>
+      <%= render partial: "card", locals: {kitchen: kitchen} %>
     <% end %>
   <% end %>
 </div>
