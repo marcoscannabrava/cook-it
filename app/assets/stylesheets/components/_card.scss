@@ -1,23 +1,52 @@
 .card {
   margin: 8px;
   background-color: #EFEEED;
-  height: 200px;
+  height: 300px;
   width: 320px;
-  // min-width: 33vw;
+  position: relative;
+    :hover {
+      text-decoration: none;
+      border: 1px red solid;
+    }
     .img-fluid {
       padding: 16px 16px 0;
-      // height: 200px;
+      width: 100%;
+      height: 195px;
+    }
+    .card-body {
+      width: 350px;
     }
     h5 {
       letter-spacing: 1px;
+      font-size: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 0px;
+      width: 275px;
     }
     p {
       font-weight: 300;
       color: #6c757d;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 230px;
+      margin: 0px;
     }
     #price {
       text-align: right;
-      padding-bottom: 10px;
-      padding-right: 10px;
+      padding: 0;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+        p {
+          font-size: 18px;
+          font-weight: 700;
+          padding: 5px;
+          width: 62px;
+          text-align: center;
+        }
     }
 }

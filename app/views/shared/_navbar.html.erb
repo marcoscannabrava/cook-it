@@ -1,8 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light">
-  <%= render 'shared/search' %>
-  <%= link_to kitchens_path, class: "navbar-brand" do %>
+  <div id="cook_it_navbar">
+    <%= link_to kitchens_path, class: "navbar-brand" do %>
     <h3>COOK IT</h3>
     <% end %>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -28,7 +29,9 @@
         </li>
       <% else %>
         <li class="nav-item">
+          <div id="login-navbar">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </div>
         </li>
       <% end %>
     </ul>
