@@ -2,7 +2,12 @@ class KitchensController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @kitchens = Kitchen.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR address ILIKE :query OR description ILIKE :query OR city ILIKE :query"
+      @kitchens = Kitchen.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @kitchens = Kitchen.all
+    end
   end
 
   def show
