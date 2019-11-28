@@ -13,6 +13,10 @@ class KitchensController < ApplicationController
   def show
     @kitchen = Kitchen.find(params[:id])
     @booking = Booking.new
+    @marker = {
+      lat: @kitchen.latitude,
+      lng: @kitchen.longitude
+    }
   end
 
   def new
