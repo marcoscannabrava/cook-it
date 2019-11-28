@@ -3,17 +3,16 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
-    # respond_to do |format|
-    #   format.js
-    # end
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.kitchen = @kitchen
+    @booking.user = User.first                      # FIX HARDCODED USER AFTER USER LOGIN JOURNEY
     if @booking.save
-      redirect_to kitchens_path(@kitchen)
+      redirect_to kitchen_path(@kitchen)
     else
-      render "kitchens/show"
+      redirect_to kitchen_path(@kitchen)
     end
   end
 
@@ -24,6 +23,6 @@ class BookingsController < ApplicationController
   end
 
   def set_kitchen
-    @kitchen = Kitchen.new(params[:id])
+    @kitchen = Kitchen.find(params[:kitchen_id])
   end
 end
