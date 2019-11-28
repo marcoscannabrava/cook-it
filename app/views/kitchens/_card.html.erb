@@ -1,5 +1,7 @@
 <div class="card">
-  <%= image_tag(kitchen.photo_url, class: "img-fluid") %>
+  <div id="card_image">
+    <%= image_tag(kitchen.photo_url, class: "img-fluid") %>
+  </div>
   <div class="card-body pb-0">
     <h5 class="card-text mb-0"><%= kitchen.title %></h5>
     <p class="mb-0"><%= kitchen.city %></p>

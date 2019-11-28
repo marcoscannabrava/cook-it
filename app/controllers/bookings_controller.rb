@@ -1,7 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_kitchen
 
   def new
     @booking = Booking.new
+    # respond_to do |format|
+    #   format.js
+    # end
   end
 
   def create
@@ -9,7 +13,7 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to kitchens_path(@kitchen)
     else
-      render "new"
+      render "kitchens/show"
     end
   end
 
@@ -19,4 +23,7 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start_at, :end_at)
   end
 
+  def set_kitchen
+    @kitchen = Kitchen.new(params[:id])
+  end
 end
