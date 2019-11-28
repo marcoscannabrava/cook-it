@@ -1,7 +1,8 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+### Rent Your Kitchen Rails App
+Project on Rails that allows users to rent out their own kitchens and rent other people kitchens.
 
 
-
-
-
-aaaaaaaa
+**Features**
+- Login
+- Authorization
+- ...

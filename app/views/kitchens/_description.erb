@@ -1,12 +1,11 @@
 <div class="description text-center">
-  <div class="card-body">
+  <div class="m-4">
     <h3 class="card-text"><%= kitchen.title %></h3>
     <p><%= kitchen.description %></p>
     <h4>R$ <%= kitchen.price_per_hour %></h4>
     <h5>per hour</h5>
     <p id="adress"><%= kitchen.city %></p>
       <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#bookingModal">BOOK IT</button>
-      <%#= link_to "BOOK IT", new_kitchen_booking_path(kitchen), class: "btn btn-secondary", :"data-toggle"=> "modal", :"data-target"=> "#bookingModal", remote: true %>
   </div>
 </div>
 
