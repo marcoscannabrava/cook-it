@@ -1,5 +1,2 @@
-
-<div class="mt-5 container d-flex">
-  <div class="container image-show"><%= image_tag(@kitchen.photo_url) %></div>
-  <%= render partial: "description", locals: {kitchen: @kitchen} %>
-</div>
+<%= render partial: "description", locals: {kitchen: @kitchen} %>
+<%= render 'shared/footbar' %>

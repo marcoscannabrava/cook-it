@@ -1,12 +1,12 @@
-<div class="card">
-  <div id="card-image">
-    <%= image_tag(kitchen.photo_url, class: "img-fluid") %>
+<%= link_to kitchen_path(kitchen), class: "kitchen-card-link" do %>
+  <div class="card">
+    <div id="card-image">
+      <%= image_tag(kitchen.photo_url, class: "img-fluid") %>
+    </div>
+    <div class="card-body pb-0">
+      <p id="city" class="mb-0"><%= kitchen.city %></p>
+      <h5 class="card-text mb-0 text-muted"><%= kitchen.title %></h5>
+      <p id="price" class="mb-0"><b>R$ <%= kitchen.price_per_hour %></b> / hour</p>
+    </div>
   </div>
-  <div class="card-body pb-0">
-    <h5 class="card-text mb-0 text-muted"><%= kitchen.title %></h5>
-    <p class="mb-0"><%= kitchen.city %></p>
-  </div>
- <!--  <div id="price">
-    <p class="mb-0">R$ <%= kitchen.price_per_hour %> <br> /hour</p>
-  </div> -->
-</div>
+<% end %>

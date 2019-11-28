@@ -1,4 +1,13 @@
+#show-description {
+  margin-top: 100px;
+
+}
+
 .description {
+  margin-left: 40px;
+  width: 25em;
+  height: 400px;
+  position: relative;
   h3 {
     letter-spacing: 1px;
     margin-bottom: 30px;
@@ -6,7 +15,7 @@
   p {
     font-weight: 300;
     color: #6c757d;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     text-align: justify;
   }
   h4 {
@@ -17,11 +26,14 @@
     font-size: 15px;
     margin-bottom: 30px;
   }
-  #adress {
+  #address {
     font-size: 15px;
-    text-align: justify;
+    text-align: center;
   }
   button {
     width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }

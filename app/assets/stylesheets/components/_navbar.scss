@@ -1,13 +1,11 @@
 .navbar {
-    #cook_it_navbar {
-      margin: 0 auto;
-      h3 {
+  background-color: #E7E6E4;
+  #cook_it_navbar {
+    margin: 0 auto;
+    h3 {
       color: gray;
-      }
     }
-    #login-navbar {
-
-    }
+  }
 }
 
 .navbar .navbar-collapse {
@@ -16,4 +14,9 @@
 
 .navbar .navbar-brand img {
   width: 40px;
+}
+
+.navbar-brand {
+  margin: 10px 0 0;
+  padding: 0;
 }

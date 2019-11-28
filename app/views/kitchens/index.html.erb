@@ -3,8 +3,8 @@
 
 <div class="container index-grid">
   <% @kitchens.each do |kitchen| %>
-    <%= link_to kitchen_path(kitchen) do %>
-      <%= render partial: "card", locals: {kitchen: kitchen} %>
-    <% end %>
+    <%= render partial: "card", locals: {kitchen: kitchen} %>
   <% end %>
 </div>
+
+<%= render 'shared/footbar' %>
