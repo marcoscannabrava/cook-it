@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= render partial: "bookings/booking-form", locals: {booking: nil} %>
+        <%= render partial: "bookings/booking-form", locals: {booking: @booking, kitchen: @kitchen} %>
       </div>
     </div>
   </div>
