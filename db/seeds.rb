@@ -16,7 +16,9 @@ owner = User.create!(email: "harry-hottie@gmail.com", password: "123456", name: 
 8.times do |i|
   kitchen = Kitchen.create!(
     title: Faker::Company.name,
-    city: Faker::Address.full_address,
+    city: Faker::Address.city,
+    adress: Faker::Address.city.full_address,
+    neighbourhood: Faker::Address.city_prefix(),
     #after the presentation decide if we will have city, adress and zipcode separeted
     description: Faker::Lorem.sentence(word_count: 20),
     price_per_hour: Faker::Commerce.price,
