@@ -1,4 +1,6 @@
 class KitchensController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @kitchens = Kitchen.all
   end
@@ -14,8 +16,12 @@ class KitchensController < ApplicationController
 
   def create
     @kitchen = Kitchen.new(kitchen_params)
-    @kitchen.save
-    redirect_to kitchen_path(@kitchen)
+    @kitchen.owner = current_user
+    if @kitchen.save
+      redirect_to kitchen_path(@kitchen)
+    else
+      render :new
+    end
   end
 
   private
