@@ -8,6 +8,5 @@ class User < ApplicationRecord
   has_many :bookings
 
   validates_format_of :email, with: Devise::email_regexp, uniqueness: true, presence: true
-  validates :name, presence: true
   validates :password, presence: true
 end
