@@ -8,8 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <h2><%= kitchen.owner.name %></h2>
-        <%= link_to kitchen.owner.email, "mailto:#{kitchen.owner.email}", target: :_blank %>
+        <%= render partial: "booking-form", locals: {booking: @booking} %>
       </div>
     </div>
   </div>

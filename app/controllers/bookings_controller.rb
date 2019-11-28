@@ -2,6 +2,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    format.js { render partial: 'modal.js.erb' }
   end
 
   def create
