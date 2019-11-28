@@ -1,8 +1,13 @@
 .navbar {
-  justify-content: space-between;
-  h3 {
-    color: grey;
-  }
+    #cook_it_navbar {
+      margin: 0 auto;
+      h3 {
+      color: gray;
+      }
+    }
+    #login-navbar {
+
+    }
 }
 
 .navbar .navbar-collapse {
