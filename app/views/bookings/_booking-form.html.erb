@@ -1,4 +1,6 @@
-<%= simple_form_for(booking) do |f| %>
-  <%= f.input :starts_at, input_html: { id: "range_start" } %>
-  <%= f.button :submit %>
+<% if booking != nil %>
+  <%= simple_form_for(booking, url: kitchen_bookings_path) do |f| %>
+    <%= f.input :start_at, input_html: { id: "range_start" } %>
+    <%= f.button :submit %>
+  <% end %>
 <% end %>

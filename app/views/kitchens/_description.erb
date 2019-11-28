@@ -5,9 +5,9 @@
     <h4>R$ <%= kitchen.price_per_hour %></h4>
     <h5>per hour</h5>
     <p id="adress"><%= kitchen.city %></p>
-    <%#= link_to "BOOK IT", new_kitchen_booking_path(kitchen), :"data-toggle"=>"modal", :"data-target"=>"#bookingModal", class: "btn btn-secondary", remote: true %>
-    <%= link_to "BOOK IT", new_kitchen_booking_path(kitchen), class: "btn btn-secondary" %>
+      <%# <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#bookingModal" data-remote="true">BOOK IT</button> %>
+      <%= button_to "BOOK IT", new_kitchen_booking_path(kitchen), class: "btn btn-secondary", :"data-toggle"=> "modal", :"data-target"=> "#bookingModal", remote: true %>
   </div>
 </div>
 
-<%#= render partial: "modal" %>
+<%= render partial: "bookings/modal" %>

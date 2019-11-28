@@ -1,8 +1,11 @@
 class BookingsController < ApplicationController
+  before_action :set_kitchen
 
   def new
     @booking = Booking.new
-    format.js { render partial: 'modal.js.erb' }
+    respond_to do |format|
+      format.js
+    end
   end
 
   def create
@@ -20,4 +23,7 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:start_at, :end_at)
   end
 
+  def set_kitchen
+    @kitchen = Kitchen.new(params[:id])
+  end
 end
