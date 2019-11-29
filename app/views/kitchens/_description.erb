@@ -4,11 +4,30 @@
     <div class="description text-center">
         <h3 class="card-text"><%= kitchen.title %></h3>
         <p><%= kitchen.description %></p>
-        <h4>R$ <%= kitchen.price_per_hour %></h4>
-        <h5>per hour</h5>
-        <p id="address"><%= kitchen.address %></p>
-        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#bookingModal">BOOK IT</button>
+        <div id="price-description">
+          <h4>R$ <%= kitchen.price_per_hour %></h4>
+          <h5>per hour</h5>
+        </div>
     </div>
-    <%= render partial: "bookings/modal" %>
   </div>
 </div>
+
+
+<div id="show-description2">
+  <div class="container d-flex">
+    <img id="photo2" src="<%= @kitchen.photo_url %>">
+    <img id="photo3" src="<%= @kitchen.photo_url %>">
+    <img id="photo4" src="<%= @kitchen.photo_url %>">
+    <div class="description2 text-center">
+      <p id="address"><%= kitchen.address %></p>
+      <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#bookingModal">BOOK IT</button>
+    </div>
+      <%= render partial: "bookings/modal" %>
+  </div>
+</div>
+
+
+
+
+
+
