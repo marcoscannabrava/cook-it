@@ -1,0 +1,43 @@
+.card-my-kitchen {
+  overflow: hidden;
+  height: 200px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: 4em 12em 45px;
+}
+
+.card-my-kitchen button {
+  opacity: 0.7;
+  margin: 0 auto;
+}
+
+.card-my-kitchen img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-my-kitchen h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-my-kitchen p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-my-kitchen .card-my-kitchen-infos {
+  padding: 16px;
+}
+
+#pricebooking {
+  font-size: 14px;
+  font-weight: 800;
+}
