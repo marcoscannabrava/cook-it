@@ -12,17 +12,16 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     @booking.kitchen = @kitchen
-    @booking.user = User.first                      # FIX HARDCODED USER AFTER USER LOGIN JOURNEY
+    @booking.user = current_user
     if @booking.save
-      redirect_to kitchen_path(@kitchen)
+      redirect_to my_bookings_path
     else
       redirect_to kitchen_path(@kitchen)
     end
   end
 
   def my_bookings
-    # @bookings = current_user.bookings
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   private
