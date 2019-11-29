@@ -1,5 +1,13 @@
 .add-kitchen-container {
-  width: 40em;
-  margin: 2em 5em;
-  border: 1px red solid;
+  background-color: white;
+  .form-inputs-kitchen {
+    width: 30em;
+    opacity: 0.9;
+    background-color: white;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  .form-inputs:visited {
+    color: red;
+  }
 }

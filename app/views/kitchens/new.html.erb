@@ -1,22 +1,21 @@
-<div class="text-center">
-  <h1 class="text-muted pt-5 pb-2">ADD A KITCHEN</h1>
+<div class="text-center pt-5 pb-2">
+  <h2>ADD A KITCHEN</h2>
 </div>
 
 <div class="add-kitchen-container">
-  <div class="form-inputs" style="background-image: url(banner.jpeg);">
-  <%= simple_form_for [@kitchen] do |f| %>
-    <%= f.input :title, label: "Kitchen's name"%>
-    <%= f.input :city, label: "City" %>
-    <%= f.input :address, label: "Address" %>
-    <%= f.input :neighbourhood, label: "Neighbourhood" %>
-    <%= f.input :description, label: "Description" %>
-    <%= f.input :price_per_hour, label: "Price(R$/Day)" %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.submit "Add Your Kitchen!", class: "btn btn-secondary mt-2" %>
+  <div class="form-inputs-kitchen">
+    <%= simple_form_for [@kitchen] do |f| %>
+      <%= f.input :title, label: "Kitchen's name"%>
+      <%= f.input :city, label: "City" %>
+      <%= f.input :address, label: "Address" %>
+      <%= f.input :neighbourhood, label: "Neighbourhood" %>
+      <%= f.input :description, label: "Description" %>
+      <%= f.input :price_per_hour, label: "Price (R$/Day)" %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.submit "Add Your Kitchen!", class: "btn btn-secondary mt-2" %>
     <% end %>
   </div>
 </div>
-<!-- adress: Faker::Address.city.full_address,
-    neighbourhood: Faker::Address.city_prefix(), -->
+
 <%= render 'shared/footbar' %>
