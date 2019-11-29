@@ -24,15 +24,27 @@ title_array = [
 ]
 
 addresses_array = [
-  "R. Custódio Serrão, 62 - Lagoa, Rio de Janeiro - RJ, 22470-230",
-  "R. Maria Angélica, 21 - Lagoa, Rio de Janeiro - RJ, 22470-201",
-  "R. Barão da Torre, 192 - Ipanema, Rio de Janeiro - RJ, 22411-000",
-  "R. Voluntários da Pátria, 402 - Loja B - Botafogo, Rio de Janeiro - RJ, 22270-016",
-  "R. Lopes Quintas, 37 - Jardim Botânico, Rio de Janeiro - RJ, 22460-010",
-  "R. Anita Garibaldi, 83 - Copacabana, Rio de Janeiro - RJ, 22041-080",
-  "R. Jangadeiros, 6 - B - Ipanema, Rio de Janeiro - RJ, 22420-010",
-  "R. Marquês de Olinda, 94 - Botafogo, Rio de Janeiro - RJ, 22251-040"
+  "Custódio Serrão, 62",
+  "Maria Angélica, 21",
+  "Barão da Torre, 192",
+  "Voluntários da Pátria, 402",
+  "Lopes Quintas, 37",
+  "Anita Garibaldi, 83",
+  "Jangadeiros, 6",
+  "Marquês de Olinda, 94"
 ]
+
+# locations_array = [
+#   [-22.960930, -43.206653],
+#   [-22.962471, -43.207790],
+#   [-22.982926, -43.201548],
+#   [-22.954865, -43.195158],
+#   [-22.962950, -43.218804],
+#   [-22.967900, -43.189006],
+#   [-22.985189, -43.196757],
+#   [-22.943262, -43.185316],
+# ]
+
 owner = User.create!(email: "harry-hottie@gmail.com", password: "123456", name: "DaBoss")
 
 8.times do |i|
@@ -49,6 +61,11 @@ owner = User.create!(email: "harry-hottie@gmail.com", password: "123456", name: 
     #if we add ratings
     #rating:  rand(0..5)
   )
+
+  # kitchen.update!(
+  #   latitude: locations_array[i][0],
+  #   longitude: locations_array[i][1]
+  # )
 end
 
   # If we change our schema
