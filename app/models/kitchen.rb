@@ -9,6 +9,8 @@ class Kitchen < ApplicationRecord
   # refactor it
   # This creates a bug that forbids kitchen creation
   # validates_associated :owner
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
 
   mount_uploader :photo, PhotoUploader
 end
