@@ -1,5 +1,14 @@
-<%= @kitchens.each do |kitchen| %>
-<p><%= kitchen.id %></p>
+<%= link_to "Add your Kitchen", new_kitchen_path, class: "btn btn-danger" %>
+<br>
+<% @kitchens.each do |kitchen| %>
+<%= link_to kitchen_path(kitchen.id), class: "kitchen-card-link" do %>
+    <img id="main-photo" src="<%= kitchen.photo %>">
+<% end %>
+  <p>Title: <%= kitchen.title %></p>
+  <p>City: <%= kitchen.city %></p>
+  <p>Address: <%= kitchen.address %></p>
+  <p>Description: <%= kitchen.description %></p>
+  <p>Price: R$ <%= kitchen.price_per_hour %> per hour</p>
+  <br><br><br><br>
 <% end %>
 
-<p>teste</p>
