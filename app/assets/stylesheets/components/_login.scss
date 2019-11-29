@@ -1,0 +1,38 @@
+.login-container {
+  background-size: cover;
+  background-position: bottom;
+  padding: 130px 0 70px;
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), image-url('banner.jpeg');
+  h2 {
+    margin-left: 100px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  .form-inputs {
+    width: 32em;
+    margin-left: 100px;
+    color: white;
+  }
+  .form-inputs:visited {
+    color: red;
+  }
+  #log-in {
+    margin-left: 100px;
+    width: 32em;
+    opacity: 0.8;
+  }
+}
+
+.form-control {
+  opacity: 0.7;
+}
+
+.form-control:focus{
+  border-color: white;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
