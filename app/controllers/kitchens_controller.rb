@@ -34,7 +34,8 @@ class KitchensController < ApplicationController
   end
 
   def my_kitchens
-    @kitchens = current_user.kitchens
+    # @kitchens = current_user.
+    @kitchens = Kitchen.all
   end
 
   private

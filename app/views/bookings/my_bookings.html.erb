@@ -1,5 +1,13 @@
-<%= @bookings.each do |booking| %>
-<p><%= booking.id %></p>
+
+<% @bookings.each do |booking| %>
+    <p><%= booking.kitchen.title %></p>
+<%= link_to kitchen_path(booking.kitchen.id), class: "kitchen-card-link" do %>
+    <img id="main-photo" src="<%= booking.kitchen.photo %>">
+<% end %>
+    <p>Start date and hour = <%= booking.start_at %></p>
+    <p>End date and hour = <%= booking.end_at %></p>
+    <p>R$ <%= booking.kitchen.price_per_hour %> per hour</p>
 <% end %>
 
-<p>teste</p>
+
+
