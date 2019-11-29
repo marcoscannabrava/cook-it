@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_kitchen
+  before_action :set_kitchen, only: [:create, :new]
 
   def index
     @bookings = current_user.bookings
@@ -18,6 +18,10 @@ class BookingsController < ApplicationController
     else
       redirect_to kitchen_path(@kitchen)
     end
+  end
+
+  def my_bookings
+    @bookings = current_user.bookings
   end
 
   private
