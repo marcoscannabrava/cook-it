@@ -3,14 +3,14 @@ Kitchen.destroy_all
 User.destroy_all
 
 photos_array = [
-  "https://images.unsplash.com/photo-1473213110592-19430a217c0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-  "https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=760&q=80",
-  "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80",
-  "https://images.unsplash.com/photo-1543503103-f94a0036ed9d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-  "https://images.unsplash.com/photo-1541379119855-2078576bb41f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-  "https://images.unsplash.com/photo-1571843439991-dd2b8e051966?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-  "https://images.unsplash.com/photo-1563238612-755d775174f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=711&q=80",
-  "https://images.unsplash.com/photo-1544457850-452ece471004?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=889&q=80"
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013047/CookIt/urkq9hq710jxismflzgy.jpg",
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013042/CookIt/ca0u1oelryimjgcinp8p.jpg",
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013038/CookIt/d11qurhbabatjheb2fdm.jpg",
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013033/CookIt/dxlhoe3jcngvsgyr6f80.jpg",
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013029/CookIt/ytyyoryltb63rbiauhzt.jpg",
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013022/CookIt/ohv4i8duwlxwzn0wee7f.jpg",
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013016/CookIt/od5exgptf9xes45tu2ae.jpg",
+  "https://res.cloudinary.com/mpc-cloud/image/upload/v1576013011/CookIt/uuuquvo62lv2x76b0aai.jpg"
 ]
 title_array = [
   "Olympe",
@@ -53,7 +53,6 @@ owner = User.create!(email: "harry-hottie@gmail.com", password: "123456", name: 
     city: "Rio de Janeiro",
     address: addresses_array[i],
     neighbourhood: addresses_array[i].match(/\-.*,/),
-    #after the presentation decide if we will have city, adress and zipcode separeted
     description: Faker::Lorem.sentence(word_count: 20),
     price_per_hour: Faker::Commerce.price,
     remote_photo_url: photos_array[i],
@@ -61,22 +60,4 @@ owner = User.create!(email: "harry-hottie@gmail.com", password: "123456", name: 
     #if we add ratings
     #rating:  rand(0..5)
   )
-
-  # kitchen.update!(
-  #   latitude: locations_array[i][0],
-  #   longitude: locations_array[i][1]
-  # )
 end
-
-  # If we change our schema
-  #address: "#{Faker::Address.street_address}, #{Faker::Address.city}, #{Faker::Address.zip_code("#####-###")}",
-
-#     t.string "city"
-#     t.text "description"
-#     t.integer "price_per_hour"
-#     t.bigint "user_id"
-#     t.datetime "created_at", null: false
-#     t.datetime "updated_at", null: false
-#     t.string "title"
-#     t.string "photo"
-#     t.index ["user_id"], name: "index_kitchens_on_user_id"
