@@ -2,7 +2,7 @@
 
 Project on Rails that allows users to rent out their own kitchens and rent other people kitchens by the hour, similar to AirBnB.
 
-Link to Heroku: https://cook-it-330-v2.herokuapp.com/
+[Link to Heroku](https://cook-it-330-v2.herokuapp.com/)
 
 Project developed @ Le Wagon Bootcamp.
 
